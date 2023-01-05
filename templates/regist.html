@@ -1,0 +1,32 @@
+{% extends "base_anonymous.html"%}
+{% load widget_tweaks%}
+
+{% block header%} 
+<h1 class="display-4">{{ Judul }}</h1>
+<p class="lead">{{ Subjudul }}</p>
+{% endblock header%} 
+
+{% block content1%} 
+<div class="" style="height: 1000px;">
+<div class="input-group justify-content-center">
+    <form method="POST">
+        {%csrf_token%}
+            <h2 class="fw-bold mb-2 text-uppercase text-center">Sign Up</h2>
+            <div class="input-group mb-3">
+                {% render_field registration_form.username class="form-control" placeholder="Username"%}
+            </div>
+            <div class="input-group mb-3">
+                {% render_field registration_form.email class="form-control" placeholder="Email"%}
+            </div>
+            <div class="input-group mb-3">
+                {% render_field registration_form.password1 class="form-control" placeholder="Password"%}
+            </div>
+            <div class="input-group mb-3">
+                {% render_field registration_form.password2 class="form-control" placeholder="Password Confirmation"%}
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success justify-content-center" name="Create User">Submit</button>
+    </form>
+</div>
+
+{% endblock content1%}

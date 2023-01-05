@@ -1,0 +1,15 @@
+{% extends "base_user.html"%}
+
+{% block header%} 
+<h1 class="display-4">{{ Judul }}</h1>
+<p class="lead">{{ Subjudul }}</p>
+{% endblock header%} 
+
+{% block content1%} 
+<p>Are you sure to logout ?</p>
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit" name="logout" value="Submit">Logout</button>
+  </form>
+
+{% endblock content1%}

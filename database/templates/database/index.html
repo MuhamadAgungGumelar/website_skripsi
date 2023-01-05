@@ -1,0 +1,85 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block app_css%} 
+{% load widget_tweaks%}
+<link rel="stylesheet" type="text/css" href="{% static "database/css/styles.css" %}">
+{% endblock app_css%} 
+
+{% block header%} 
+<h1 class="display-4">{{ Judul }}</h1>
+<p class="lead">Halaman Untuk {{Subjudul}}</p>
+{% endblock header%} 
+
+{% block content3%}
+<div class="" style="height: auto;">
+    <h3>Please Upload to Add or Update the Database</h3>
+    <h5>
+        <div class="input-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    {% render_field Post_Form.gambar.label %}
+                    {% render_field Post_Form.gambar class="form-control"%}
+                </div >
+                <div class="input-group mb-3">
+                    {% render_field Post_Form.category.label %}
+                    {% render_field Post_Form.category class="form-control"%}
+                </div>
+                <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+        </div>
+    </h5>
+</div>
+{% endblock content3%}
+
+{% block content2%}        
+<div style="height: auto;">
+    <br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <b>Database X-ray Thorax Images</b>
+                    </div>
+                    <div class="card-body">
+                        <table class = "table" >
+                            <thead class = "thead-light">
+                                <tr>
+                                    <th widht="3%">No.</th>
+                                    <th width="37%">Category</th>
+                                    <th width="20%">File</th>
+                                    <th></th>
+                                    <th width="20%">Time</th>
+                                    <th width="15%">Update</th>
+                                    <th width="15%">Delete</th>
+                                 </tr>
+                            </thead>
+                            <tbody>
+                                {% for post in Post_Model %}
+                                <tr>
+                                    <th scope="row">{{forloop.counter}}</th>
+                                    <td>{{post.category}} </td>
+                                    <td>{{post.gambar}}</td>
+                                    <td><a href="images/{{post.slug}}" class="btn btn-info">Here</a></td>
+                                    <td>{{post.waktu}}</td>
+                                    <td>
+                                        <a class="btn btn-warning" href="{% url 'database:update' post.id %}" role="button">Update</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-danger" href="{% url 'database:delete' post.id %}" role="button">Delete</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>          
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>             
+</div>
+{% endblock content2%}
+
+

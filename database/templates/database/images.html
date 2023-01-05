@@ -1,0 +1,30 @@
+{% extends "base_user.html"%}
+{% load static %}
+
+{% block app_css%} 
+<link rel="stylesheet" type="text/css" href="{% static "database/css/styles.css" %}">
+{% endblock app_css%} 
+
+{% block header%} 
+<h1 class="display-4">{{ Judul }}</h1>
+<p class="lead ">{{Subjudul}}</p>
+{% endblock header%} 
+
+{% block content3%}
+<div class="" style="height: auto;">
+    <h1 class="text-center">Result of Lung Disease Detection Data</h1>
+    <h5>
+        <div class="text-center" style="margin-top: 20px;">
+            <img src="{{Post_Model.gambar}}" class="rounded" alt="">
+        </div>
+    </h5>
+    <h6>
+        <div class="text-center">
+            <br>
+            <h3>Result : {{Post_Model.category}}</h3>
+        </div>
+    </h6>
+</div>
+{% endblock content3%}
+
+

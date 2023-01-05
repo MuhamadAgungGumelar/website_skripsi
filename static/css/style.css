@@ -1,0 +1,104 @@
+.jumbotron{
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.3rem;
+
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(30,87,153,0.54) 46%, rgba(125,185,232,0.18) 82%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+ 
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(30,87,153,0.54) 46%,rgba(125,185,232,0.18) 82%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+     
+    background: linear-gradient(90deg, rgba(53,90,115,1) 7%, rgba(105,152,171,1) 50%, rgba(64,104,130,1) 78%, rgba(26,55,77,1) 92%);
+     
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    float: left;
+}
+
+nav a{
+    color: rgb(218, 96, 15);
+    display: block;
+    font: 100;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-family: arial;
+}
+
+nav a:hover{
+    background-color: rgb(45, 70, 80);
+}
+
+.glass  {
+    background: rgba(86, 67, 67, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.8px);
+    -webkit-backdrop-filter: blur(14.8px);
+    border: 1px solid rgba(86, 67, 67, 0.08);
+}
+
+.form-control{
+     background: rgba(86, 67, 67, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.8px);
+    -webkit-backdrop-filter: blur(14.8px);
+    border: 1px solid rgba(86, 67, 67, 0.08);
+}
+
+figcaption{
+    font-size: medium;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+footer {
+    background-color: rgb(45, 70, 80);
+    color: rgb(7, 5, 5);
+    padding: 20px;
+    text-align: center;
+  }
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.footer {
+    height: 60px; /* atau nilai lain sesuai keinginan Anda */
+  }
+
+  .tebal{
+    font-weight: bold;
+    color: aliceblue;
+  }
