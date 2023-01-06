@@ -1,3 +1,4 @@
+---
 deployement:
 tasks:
 - export DEPLOYPATH=/home/u1573408/website_skripsi
